@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react'
 import api from '../api'
 
@@ -84,7 +83,7 @@ class MoviesInsert extends Component {
         const { name, rating, time } = this.state
         return (
             <Wrapper>
-                <Title>Create Movie</Title>
+                <Title>Create Project</Title>
 
                 <Label>Name: </Label>
                 <InputText
@@ -93,26 +92,26 @@ class MoviesInsert extends Component {
                     onChange={this.handleChangeInputName}
                 />
 
-                <Label>Rating: </Label>
+                <Label>Year: </Label>
                 <InputText
                     type="number"
-                    step="0.1"
+                    step="1"
                     lang="en-US"
-                    min="0"
-                    max="10"
+                    min="1950"
+                    max="2021"
                     pattern="[0-9]+([,\.][0-9]+)?"
                     value={rating}
                     onChange={this.handleChangeInputRating}
                 />
 
-                <Label>Time: </Label>
+                <Label>Make and Model: </Label>
                 <InputText
                     type="text"
                     value={time}
                     onChange={this.handleChangeInputTime}
                 />
 
-                <Button onClick={this.handleIncludeMovie}>Add Movie</Button>
+                <Button onClick={this.handleIncludeMovie}>Add Project</Button>
                 <CancelButton href={'/movies/list'}>Cancel</CancelButton>
             </Wrapper>
         )
