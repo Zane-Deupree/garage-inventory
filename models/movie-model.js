@@ -1,5 +1,6 @@
-import { Schema as _Schema, model } from 'mongoose'
-const Schema = _Schema
+const mongoose = require("mongoose");
+
+const Schema = mongoose.Schema
 
 const Movie = new Schema(
     {
@@ -10,4 +11,4 @@ const Movie = new Schema(
     { timestamps: true },
 )
 
-export default model('movies', Movie)
+module.exports=mongoose.model('movies', Movie)
