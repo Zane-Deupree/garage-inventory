@@ -6,7 +6,7 @@ const db = require('./db')
 const movieRouter = require('./routes/movie-router')
 
 const app = express()
-const apiPort = process.env.apiPORT || 8070
+const PORT = process.argv.PORT || 8070
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cors())
@@ -20,4 +20,4 @@ app.get('/', (req, res) => {
 
 app.use('/api', movieRouter)
 
-app.listen(apiPort, () => console.log(`Server running on port ${apiPort}`))
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
