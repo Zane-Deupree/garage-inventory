@@ -14,10 +14,11 @@ app.use(bodyParser.json())
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
-app.get('/', (req, res) => {
-    res.send('Hello World!')
-})
+app.use(express.static("public"))
 
 app.use('/api', movieRouter)
+app.use("*", function(req, res){
+    res.sendFile("./client/build/index.html")
+  })
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
