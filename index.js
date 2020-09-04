@@ -6,7 +6,7 @@ const db = require('./db')
 const movieRouter = require('./routes/movie-router')
 
 const app = express()
-const PORT = process.argv.PORT || 8070
+const PORT = process.env.PORT || 8070
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cors())
