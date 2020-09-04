@@ -16,7 +16,6 @@
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build"
   },
-  
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -24,10 +23,18 @@
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "mongoose": "^5.10.2",
-    "nodemon": "^2.0.4",
-    "if-env": "^1.0.4"
-
-  }
+    "if-env": "^1.0.4",
+    "mongodb": "^3.6.1",
+    "mongoose": "^5.10.3",
+    "nodemon": "^2.0.4"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zane-Deupree/garage-inventory.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Zane-Deupree/garage-inventory/issues"
+  },
+  "homepage": "https://github.com/Zane-Deupree/garage-inventory#readme"
 }
-
