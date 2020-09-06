@@ -13,10 +13,7 @@ app.use(cors())
 app.use(bodyParser.json())
 
 
-
-app.get('/', (req, res) => {
-    res.send('Hello World!')
-})
+app.get('localhost:3000/movies/create')
 
 app.use('/api', movieRouter)
 app.use("*", function(req, res){
