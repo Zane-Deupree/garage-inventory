@@ -1,3 +1,4 @@
+  
 const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
@@ -6,24 +7,21 @@ const db = require('./db')
 const movieRouter = require('./routes/movie-router')
 
 const app = express()
-const PORT = process.env.PORT || 8070
+const apiPort = process.env.apiPort || 8070
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cors())
 app.use(bodyParser.json())
 
+db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 app.get('/', (req, res) => {
     res.send('Hello World!')
 })
 
-app.use('./client/src/api', movieRouter)
-app.use("*", function(req, res){
-    res.sendFile("./cli")
-  })
-  app.use(express.static("public"))
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
+app.use('/api', movieRouter)
 
+app.listen(apiPort, () => console.log(`Server running on port ${apiPort}`))
 const MongoClient = require('mongodb').MongoClient;
 
 // replace the uri string with your connection string.
