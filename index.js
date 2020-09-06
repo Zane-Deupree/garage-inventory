@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 
 app.use('./client/src/api', movieRouter)
 app.use("*", function(req, res){
-    res.sendFile("./client/build/index.html")
+    res.sendFile("./cli")
   })
   app.use(express.static("public"))
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
