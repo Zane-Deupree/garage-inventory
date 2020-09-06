@@ -36,5 +36,5 @@
   "bugs": {
     "url": "https://github.com/Zane-Deupree/garage-inventory/issues"
   },
-  "homepage": "https://github.com/Zane-Deupree/garage-inventory#readme"
+  "homepage": "localhost:3000/movies/create"
 }
