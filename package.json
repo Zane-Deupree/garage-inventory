@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "set PORT=8000 && react-scripts start",
+    "start": "set PORT=8070 && react-scripts start",
     "start:dev": "concurrently \"nodemon server.js --ignore 'client/*'\" \"npm run client\"",
     "start:prod": "node server.js",
     "client": "cd client && npm start",
